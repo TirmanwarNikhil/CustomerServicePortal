@@ -1,0 +1,41 @@
+
+<table border="1">
+    
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <td>
+      <label for="name">First Name</label>
+      </td>
+      <td>
+      <input type="text" class="form-control" id="custFName" required [(ngModel)]="customer.custFName" name="custFName">
+      </td>
+    </div>
+
+    <div class="form-group">
+      <td>
+      <label for="name">Last Name</label>
+      </td>
+      <td>
+      <input type="text" class="form-control" id="custLname" required [(ngModel)]="customer.custLname" name="custLname">
+      </td>
+    </div>
+
+    <div class="form-group">
+      <td>
+      <label for="name">Mobile Number</label>
+      </td>
+      <td>
+      <input type="text" class="form-control" id="mobileNumber" required [(ngModel)]="customer.mobileNumber" name="mobileNumber">
+      </td>
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4> Customer has been Created.</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>
+</table>
